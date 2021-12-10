@@ -1,7 +1,11 @@
 import React from 'react'
-import Products from './Products';
 import { useSelector,useDispatch } from 'react-redux';
+
+//Action
 import { zoomOut} from '../features/zommSlice';
+
+//Component
+import Products from './Products';
 
 //Icons
 import close from '../images/icon-close.svg'

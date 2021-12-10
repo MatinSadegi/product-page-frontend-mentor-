@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import {orginalImageSlider } from '../components/DataSlider'; 
+import {orginalImageSlider } from '../Data/DataSlider'; 
 
 export const btnSlider = createSlice({ 
     name:"btn-slider",

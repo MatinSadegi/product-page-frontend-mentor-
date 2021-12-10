@@ -1,7 +1,11 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
+//Actions
 import { increment, decrement} from '../features/counterSlice';
 import {active} from '../features/addSlice';
+
+//Icon
 import cart from '../images/icon-cart.svg';
 
 

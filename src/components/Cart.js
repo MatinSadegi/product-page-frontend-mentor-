@@ -1,11 +1,14 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
+
+//Component
 import CartItem from './CartItem';
 
 function Cart() {
 
     const cart = useSelector ( state => state.cart.value);
     const add = useSelector (state => state.add.value);
+    
     return (
         <div className="cart" style={{display: cart ? "block" : "none"}}>
             <p>Cart</p>

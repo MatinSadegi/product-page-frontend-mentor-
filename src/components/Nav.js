@@ -1,5 +1,7 @@
 import React,{useState} from 'react';
 import { useSelector,useDispatch } from 'react-redux';
+
+//Actions
 import {active} from '../features/cartSlice';
 
 //Images
@@ -12,14 +14,15 @@ import close from '../images/icon-close.svg';
 
 function Nav() {
 
-    const dispatch = useDispatch()
-
     const count = useSelector (state => state.counter.value);
     const add = useSelector (state => state.add.value);
 
     const [menuIcon, setMenuIcon] = useState(true);
+
+    const dispatch = useDispatch()
+
    
-      const menuHandler = (e) =>{
+    const menuHandler = (e) =>{
         setMenuIcon(prevMenuIcon => !prevMenuIcon)
     }
 

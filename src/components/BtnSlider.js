@@ -1,6 +1,7 @@
 import React from 'react';
-
 import { useDispatch } from 'react-redux';
+
+//Actions
 import { nextSlide, previousSlide } from '../features/btnSliderSlice';
 
 //Slider Buttons Icon

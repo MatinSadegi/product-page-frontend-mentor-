@@ -1,15 +1,21 @@
 import React from 'react';
-import image from '../images/image-product-1-thumbnail.jpg';
-import trash from '../images/icon-delete.svg';
 import { useSelector,useDispatch } from 'react-redux';
+
+//Actions
 import {deactive} from '../features/addSlice';
 import {reset} from '../features/counterSlice';
 
+//Image
+import image from '../images/image-product-1-thumbnail.jpg';
+
+//Icon
+import trash from '../images/icon-delete.svg';
+
 function CartItem() {
 
-    const dispatch = useDispatch()
-
     const value = useSelector(state => state.counter.value);
+    
+    const dispatch = useDispatch();
 
     return (
         <div className="cart-item" >
