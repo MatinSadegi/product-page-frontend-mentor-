@@ -1,0 +1,75 @@
+
+@mixin button($image: url(../images/icon-minus.svg), $position: left) {
+  background: $image no-repeat $position ;
+  cursor: pointer;
+  border: none;
+
+  width: 45%;
+  height: 100%;
+}
+.reduce {
+  margin-top: 40px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .reduce__buttons {
+    display: flex;
+    background-color: $light-grayish-blue;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: 35%;
+    height: 100%;
+    border-radius: 10px;
+    button:first-of-type {
+      @include button;
+    }
+    span {
+      font-weight: $bold;
+    }
+    button:last-of-type {
+      @include button($image: url(../images/icon-plus.svg), $position:right);
+    }
+  }
+  > button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    border: none;
+    width: 60%;
+    background-color: $orange;
+    border-radius: 10px;
+    color: $white;
+    font-weight: $bold;
+    &:hover{
+      opacity: 0.8;
+    }
+    img {
+      width: 17px;
+      height: 17px;
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .reduce{
+    flex-direction: column;
+    height: auto;
+    .reduce__buttons{
+      width: 100%;
+      margin: 0;
+      height: 55px;
+    }
+    >button{
+      width: 100%;
+      height: 55px;
+      margin-top: 15px;
+    }
+  }
+}

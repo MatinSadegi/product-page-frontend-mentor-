@@ -1,0 +1,64 @@
+.information {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  h5 {
+    color: $orange;
+    letter-spacing: 0.15rem;
+    font-weight: $bold;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  >p{
+    color: $dark-grayish-blue;
+    margin-bottom: 30px;
+    line-height: 22px;
+  }
+  .price {
+    p{
+      font-size: 1.8rem;
+      font-weight: $bold;
+      display: flex;
+      align-items: center;
+      span {
+        color: $orange;
+        background-color: $pale-orange;
+        font-size: 1rem;
+        border-radius: 7px;
+        padding: 5px 10px;
+        margin-left: 20px;
+      }
+    }
+    del {
+      margin-top: 10px;
+      font-weight: $bold;
+      color: $grayish-blue;
+    }
+  }
+}
+@media screen and (max-width: 1110px) {
+  .information {
+    h1 {
+      font-size: 2rem;
+    }
+    >p{
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .information {
+    width: 100%;
+    padding: 30px;
+    margin: 0;
+    .price{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .info{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        p{
+            font-size: 13px;
+            .total-price{
+                color: black;
+                font-weight: $bold;
+                margin-left: 5px;
+            }
+        }
+    }
+}

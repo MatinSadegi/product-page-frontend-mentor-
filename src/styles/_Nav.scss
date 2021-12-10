@@ -1,0 +1,125 @@
+@import 'Colors&Fonts';
+
+header {
+  display: grid;
+
+  grid-template-columns: 1fr 4fr 200px;
+  align-items: flex-start;
+  border-bottom: 1px solid $grayish-blue;
+  padding-top: 70px;
+  .menu-icon {
+    display: none;
+  }
+  nav {
+    display: flex;
+    margin-left: 30px;
+    .close-icon {
+      display: none;
+    }
+    a {
+      text-decoration: none;
+      width: 75px;
+      text-align: center;
+      color: $dark-grayish-blue;
+      padding-bottom: 45px;
+      border-bottom: 4px solid transparent;
+
+      &:hover {
+        color: $very-dark-blue;
+        border-color: $orange;
+      }
+    }
+  }
+  .profiles {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0px 25px;
+    .cart-div {
+      position: relative;
+      p{
+        position: absolute;
+        width: 20px;
+        height: 13px;
+        right: -6px;
+        top: -6px;
+        z-index: 1;
+        background-color:$orange;
+        color: $white;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+      }
+      .cart-icon {
+        &:hover {
+          filter: brightness(80) invert(1);
+        }
+      }
+    }
+    .avatar {
+      width: 60px;
+      border-radius: 50%;
+      transform: translate(-50%, -40%);
+      &:hover {
+        border: 2px solid $orange;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  header {
+    grid-template-columns: 1fr 6fr 6fr;
+    align-items: center;
+    border: none;
+    padding-top: 30px;
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+    }
+    nav {
+      position: fixed;
+      inset: 0 30% 0 0;
+      margin-left: 0;
+      padding: 20px 0 0 30px;
+      flex-direction: column;
+      transform: translateX(-1000px);
+      transition: transform 500ms ease;
+      background-color: $white;
+      z-index: 12;
+
+      .close-icon {
+        display: block;
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        margin-bottom: 50px;
+      }
+      a {
+        text-align: left;
+        color: $black;
+        padding-bottom: 20px;
+        border-bottom: none;
+        font-weight: $bold;
+      }
+    }
+    .profiles {
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0;
+      gap: 20px;
+      .avatar {
+        transform: translate(0, -0%);
+        width: 35px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  header{
+    padding: 30px;
+  }
+}
